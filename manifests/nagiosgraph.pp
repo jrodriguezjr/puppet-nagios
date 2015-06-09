@@ -75,9 +75,9 @@ class nagios::nagiosgraph (
 
   # With selinux, adjustements are needed for nagiosgraph
   if $selinux and $::selinux_enforced {
-    selinux::audit2allow { 'nagiosgraph':
-      source => "puppet:///modules/${module_name}/messages.nagiosgraph",
-    }
+    # selinux::audit2allow { 'nagiosgraph':
+    #   source => "puppet:///modules/${module_name}/messages.nagiosgraph",
+    # }
   }
 
   # Server-Side Include nagios CGI snippet for mouseover js code
